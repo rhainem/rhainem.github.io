@@ -47,7 +47,6 @@ p.footer {
 
 .te-reo,
 .english {
-  margin: 0;
   display: inline-block;
 }
 
@@ -55,7 +54,7 @@ p.footer {
   font-size: 32px;
   line-height: 85%;
   vertical-align: top;
-  margin-top: 0.4em;
+  margin-bottom: 1rem;
   font-weight: 300;
   color: #aaa;
 }
