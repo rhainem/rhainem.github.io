@@ -1,9 +1,109 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles/main.css" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <title>My blog</title>
+  </head>
   <body>
-    <h1>Kia ora Taiao! (Hello World!)</h1> 
-    <p> This is the beginning of my website home page.</p>
-    <p> It will eventually contain a list of links to all my blogs. </p>
+    <header class="header">
+      <div class="top-menu">
+        <a href="index.html">
+          <img class="logo" src="images/logo.png" alt="blog logo" />
+        </a>
+
+        <nav class="nav">
+          <a href="index.html" class="btn-nav is--nav w-inline-block">
+            <div class="btn-nav__content">Home</div>
+          </a>
+          <a href="#" class="btn-nav is--nav w-inline-block">
+            <div class="btn-nav__content">About</div>
+          </a>
+          <a href="#" class="btn-nav is--nav w-inline-block">
+            <div class="btn-nav__content">Blog</div>
+          </a>
+          <a href="#" class="btn-nav is--nav w-inline-block">
+            <div class="btn-nav__content">Contact</div>
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="title">
+      <div class="home-container">
+        <div class="heading-container">
+          <h1 class="te-reo huge-title"><span>Kia ora Taiao!</span></h1>
+          <h1 class="english"><span>(Hello World!)</span></h1>
+        </div>
+        <div class="intro">
+          <p>
+            This is the beginning of my website home page. It will eventually
+            contain a list of links to all my blogs.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="blog-article-section">
+      <div class="blog-article-container">
+        <div class="article-preview">
+          <h1>Stories and Legends</h1>
+          <p>
+            E kore e mau i a koe, he wae kai pakiaka. A foot accustomed to
+            running over roots makes the speediest runner. Te Houtaewa was the
+            fastest runner of his day and played many pranks on his peoples
+            enemies...
+          </p>
+          <a href="blog/te-houtaewa-template.html"
+            ><button type="button">Read Now</button></a
+          >
+        </div>
+
+        <div class="article-preview">
+          <h1>Display Inline vs Inline Blocks</h1>
+          <p>
+            Are you trying to align elements side by side but don't know how to
+            change the default behaviour of block elements in CSS? In this post,
+            we'll explain the display property and break down the difference
+            between inline and inline-block values.
+          </p>
+          <a href="blog/html-css.html"
+            ><button type="button">Read Now</button></a
+          >
+        </div>
+
+        <div class="article-preview">
+          <h1>Blog Post III</h1>
+          <p>
+            Lorem ipsum is placeholder text commonly used in the graphic, print,
+            and publishing industries for previewing layouts and visual mockups.
+          </p>
+          <a href="#"><button type="button">Read Now</button></a>
+        </div>
+        <div class="article-preview">
+          <h1>Blog Post IV</h1>
+          <p>
+            Lorem ipsum is placeholder text commonly used in the graphic, print,
+            and publishing industries for previewing layouts and visual mockups.
+          </p>
+          <a href="#"><button type="button">Read Now</button></a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p class="footer">© 2025</p>
+    </footer>
+
+    <!-- <script src="js/gsap.min.js"></script>
+    <script src="js/SplitText.min.js"></script>
+    <script src="js/GSDevTools.min.js"></script>
+    <script src="js/main.js"></script> -->
   </body>
 </html>
