@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/main.css" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Display Inline vs Inline Blocks</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <a href="../index.html">
+          <img
+            class="logo"
+            src="../images/logo.png"
+            alt="blog logo"
+            width="130px"
+            height="auto"
+          />
+        </a>
+      </nav>
+      <div class="top-menu">
+        <a href="../index.html" class="btn-nav is--nav w-inline-block">
+          <div class="btn-nav__content">Home</div>
+        </a>
+        <a href="#" class="btn-nav is--nav w-inline-block">
+          <div class="btn-nav__content">About</div>
+        </a>
+        <a href="#" class="btn-nav is--nav w-inline-block">
+          <div class="btn-nav__content">Blog</div>
+        </a>
+        <a href="#" class="btn-nav is--nav w-inline-block">
+          <div class="btn-nav__content">Contact</div>
+        </a>
+      </div>
+    </header>
+
+    <section class="title">
+      <div class="heading">
+        <h1>What does it mean to display inline vs inline blocks?</h1>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="content">
+          <p>
+            Are you trying to align elements side by side but don't know how to
+            change the default behaviour of block elements in CSS? In this post,
+            we'll explain the display property and break down the difference
+            between
+            <span class="code">inline</span> and
+            <span class="code">inline-block</span> values. We'll also help you
+            decide when to use each.
+          </p>
+
+          <h2>What is the <span class="code">display</span> property?</h2>
+          <p>
+            The <span class="code">display</span> property in CSS controls how
+            elements behave on a page. It determines whether an element starts
+            on a new line, how much space it takes up, and how it works with
+            margins and padding.
+          </p>
+          <p>Some common <span class="code">display</span> values are:</p>
+          <ul>
+            <li>
+              <p><span class="code">block</span></p>
+            </li>
+            <li>
+              <p><span class="code">inline</span></p>
+            </li>
+            <li>
+              <p><span class="code">inline-block</span></p>
+            </li>
+            <li>
+              <p><span class="code">flex</span></p>
+            </li>
+            <li>
+              <p><span class="code">grid</span></p>
+            </li>
+          </ul>
+          <p>
+            In this post, we will focus on <span class="code">inline</span> and
+            <span class="code">inline-block</span>.
+          </p>
+
+          <h2>
+            What is the difference between
+            <span class="code">display: inline</span> and
+            <span class="code">display: inline-block</span>?
+          </h2>
+          <p>
+            Elements set to <span class="code">display: inline</span> behave
+            like words in a sentence — one element follows another horizontally,
+            left to right (or right to left, depending on text direction). They
+            don't start on a new line. You can set left and right margins and
+            padding, but top and bottom margins and padding typically won't
+            affect layout. You also can't set width or height.
+          </p>
+          <p>
+            Elements set to <span class="code">display: inline-block</span> also
+            sit side by side like words in a sentence. However, unlike
+            <span class="code">display: inline</span>, you can control their
+            width, height, and all margins and padding.<br /><br />
+          </p>
+
+          <p>Example HTML</p>
+          <div class="example-code">
+            <pre>
+          <code>
+            &lt;p&gt;
+              &lt;span class="inline"&gt;Inline&lt;/span&gt;
+              &lt;span class="inline"&gt;Inline&lt;/span&gt;
+            &lt;/p&gt;
+            &lt;p&gt;
+              &lt;span class="inline"&gt;Inline-Block&lt;/span&gt;
+              &lt;span class="inline"&gt;Inline-Block&lt;/span&gt;
+            &lt;/p&gt;
+          </code>
+        </pre>
+          </div>
+
+          <p>Example CSS</p>
+          <div class="example-code">
+            <pre>
+          <code>
+            .inline {
+              display: inline;
+              background: yellow;
+              padding: 10px;
+              margin: 10px;
+              width: 100px;
+              height: 50px;
+            }
+
+            .inline-block {
+              display: inline-block;
+              background: red;
+              padding: 10px;
+              margin: 10px;
+              width: 100px;
+              height: 50px;
+            }
+          </code>
+        </pre>
+          </div>
+
+          <p>Result</p>
+          <div class="demonstration">
+            <p>
+              <span class="inline">Inline</span>
+              <span class="inline">Inline</span>
+            </p>
+            <p>
+              <span class="inline-block">Inline-Block</span>
+              <span class="inline-block">Inline-Block</span>
+            </p>
+            <p><br /></p>
+          </div>
+
+          <h3>Key Differences</h3>
+          <table cellspacing="0" cellpadding="0">
+            <tr>
+              <th><p>Action</p></th>
+              <th><p>Inline</p></th>
+              <th><p>Inline-Block</p></th>
+            </tr>
+            <tr>
+              <td><p>Stacks with text</p></td>
+              <td><p>Yes</p></td>
+              <td><p>Yes</p></td>
+            </tr>
+            <tr>
+              <td><p>Starts on a new line</p></td>
+              <td><p>No</p></td>
+              <td><p>No</p></td>
+            </tr>
+            <tr>
+              <td><p>Allows you to set width/height</p></td>
+              <td><p>No</p></td>
+              <td><p>Yes</p></td>
+            </tr>
+            <tr>
+              <td><p>Allows you to set margin/padding</p></td>
+              <td><p>Horizontal only</p></td>
+              <td><p>Yes</p></td>
+            </tr>
+          </table>
+
+          <h2>When should you use each?</h2>
+          <p>
+            Use <span class="code">inline</span> for styling words or small
+            pieces of text inside a sentence.
+          </p>
+          <p>
+            Use <span class="code">inline-block</span> when you want elements to
+            sit next to each other and control their size — like buttons or
+            images.
+          </p>
+
+          <h2>Things to keep in mind</h2>
+          <p>You can't set width or height on an inline element.</p>
+          <p>
+            If you notice a gap between two
+            <span class="code">inline-block</span> elements, it's usually caused
+            by spaces or line breaks in your HTML.
+          </p>
+
+          <h2>Key takeaways</h2>
+          <p>
+            <span class="code">inline</span> flows with text, but you can't set
+            its size.
+          </p>
+          <p>
+            <span class="code">inline-block</span> also flows with text, but you
+            can control its size.
+          </p>
+          <p>
+            <strong>Quick Tip:</strong>
+            <br />If you need something to sit inline and have a custom width or
+            height, use <span class="code">inline-block</span>.
+          </p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <p class="footer">© 2025</p>
+    </footer>
+  </body>
+</html>
